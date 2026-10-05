@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CV - Alex Israel Peralta Martínez</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #223b63;
+    --navy-dark: #1b2f4e;
+    --lav: #e9ecf6;
+    --lav-side: #e4e8f3;
+    --ink: #2b2b2b;
+    --muted: #4a4a4a;
+  }
+  body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ===== Header ===== */
+  .header {
+    background: var(--lav);
+    display: flex;
+    align-items: center;
+    padding: 34px 40px 30px;
+    gap: 34px;
+  }
+  .avatar {
+    flex: 0 0 150px;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    background: var(--navy-dark);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 54px; font-weight: 700;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px var(--lav-side);
+    letter-spacing: 1px;
+  }
+  .header .name h1 {
+    color: var(--navy);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: .5px;
+  }
+  .header .name .title {
+    color: var(--navy);
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+    font-weight: 600;
+  }
+
+  /* ===== Body layout ===== */
+  .body { display: flex; }
+  .side {
+    flex: 0 0 255px;
+    background: var(--lav-side);
+    padding: 30px 26px 40px;
+  }
+  .main {
+    flex: 1;
+    padding: 30px 34px 40px;
+  }
+
+  h2 {
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 3px;
+    background: var(--navy);
+    margin-top: 6px;
+  }
+  .section { margin-bottom: 26px; }
+
+  /* contact */
+  .contact-row { display: flex; align-items: center; gap: 12px; margin-top: 14px; font-size: 12.5px; color: var(--muted); }
+  .ic {
+    flex: 0 0 30px; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--navy); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+  }
+  .contact-row span { word-break: break-word; }
+
+  /* lists */
+  ul.bullets { list-style: none; margin-top: 12px; }
+  ul.bullets li { position: relative; padding-left: 16px; margin-bottom: 7px; font-size: 13px; color: var(--ink); }
+  ul.bullets li::before { content: "•"; color: var(--navy); position: absolute; left: 0; font-weight: 700; }
+
+  /* education side */
+  .edu-item { margin-top: 14px; font-size: 13px; }
+  .edu-item .deg { font-weight: 700; color: var(--ink); }
+  .edu-item .inst { color: var(--muted); font-size: 12.5px; }
+  .edu-item .yr { color: var(--muted); font-size: 12.5px; }
+
+  /* about */
+  .about p { font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+  /* experience */
+  .xp { margin-top: 16px; }
+  .xp .role { display: flex; align-items: center; gap: 9px; }
+  .xp .role::before { content: "•"; color: var(--navy); font-size: 20px; line-height: 1; }
+  .xp .role b { color: var(--ink); font-size: 13.5px; letter-spacing: .5px; text-transform: uppercase; }
+  .xp .meta { margin-left: 18px; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .xp .desc { margin-left: 18px; font-size: 12.5px; color: var(--muted); margin-top: 7px; }
+
+  .lang { font-size: 13px; color: var(--ink); margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="avatar">AP</div>
+    <div class="name">
+      <h1>Alex Israel<br>Peralta Martínez</h1>
+      <div class="title">DESARROLLADOR DE SOFTWARE JR.</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <div class="side">
+      <div class="section">
+        <h2>Contacto</h2>
+        <div class="contact-row"><div class="ic">✆</div><span>814 535 9906</span></div>
+        <div class="contact-row"><div class="ic">✉</div><span>aipm.1001@gmail.com</span></div>
+        <div class="contact-row"><div class="ic">⌖</div><span>El Pueblito, Querétaro</span></div>
+      </div>
+
+      <div class="section">
+        <h2>Habilidades</h2>
+        <ul class="bullets">
+          <li>Fundamentos de programación</li>
+          <li>Lógica y resolución de problemas</li>
+          <li>Nociones de QA y pruebas</li>
+          <li>Herramientas de IA (Google AI)</li>
+          <li>Ofimática (Word, Excel)</li>
+          <li>Redes sociales y contenido digital</li>
+          <li>Trabajo en equipo</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Educación</h2>
+        <div class="edu-item">
+          <div class="deg">Ing. en Computación / Desarrollo de Software</div>
+          <div class="inst">Nuevo ingreso — nivel superior</div>
+        </div>
+        <div class="edu-item">
+          <div class="deg">Fundamentos del Desarrollo de Software</div>
+          <div class="inst">Gobierno de México</div>
+          <div class="yr">2025</div>
+        </div>
+        <div class="edu-item">
+          <div class="deg">Fundamentos de Google AI</div>
+          <div class="inst">INFOTEC / Coursera</div>
+          <div class="yr">2026</div>
+        </div>
+        <div class="edu-item">
+          <div class="deg">Bachillerato (EPOEM 81)</div>
+          <div class="inst">Prepa Oficial Edo. de México</div>
+          <div class="yr">Egreso 2019</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Idiomas</h2>
+        <div class="lang">Español – Nativo</div>
+        <div class="lang">Inglés – Básico (A2), escrito y hablado</div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="section about">
+        <h2>Acerca de mí</h2>
+        <p>Estudiante que inicia su formación en Desarrollo de Software / Ingeniería en Computación,
+           con fuerte motivación por construir una carrera en tecnología. Cuento con bases en
+           fundamentos del desarrollo de software y herramientas de IA.</p>
+        <p>Mi experiencia previa me dio disciplina, atención al detalle y hábito de trabajar bajo
+           estándares y pruebas de funcionamiento. Busco una oportunidad trainee/junior en
+           desarrollo, QA, sistemas o redes sociales, donde pueda aprender, aportar y crecer.</p>
+      </div>
+
+      <div class="section">
+        <h2>Experiencia Laboral</h2>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:12px;">
+          Competencias transferibles a tecnología: seguir estándares, pruebas de funcionamiento
+          (mentalidad QA) y resolución de problemas con atención al detalle.</p>
+
+        <div class="xp">
+          <div class="role"><b>Técnico Eléctrico — Instalación y Mantenimiento</b></div>
+          <div class="meta">Ingeniería Profesional Aplicada RIBA · Sep 2024 – Feb 2025</div>
+          <div class="desc">Pruebas de funcionamiento de equipos, cumplimiento de normas de
+             seguridad y trabajo en equipo para asegurar la continuidad operativa.</div>
+        </div>
+
+        <div class="xp">
+          <div class="role"><b>Apoyo en Mantenimiento Industrial</b></div>
+          <div class="meta">Especialistas en Mant. Industrial y Sistemas Automatizados S.A. de C.V. · Ago – Sep 2024</div>
+          <div class="desc">Montaje de equipos y validación de sistemas automatizados bajo
+             estándares establecidos.</div>
+        </div>
+
+        <div class="xp">
+          <div class="role"><b>Auxiliar Eléctrico y de Construcción</b></div>
+          <div class="meta">Proyectos Electr y Constr, S.A. · Abr – Jun 2024</div>
+          <div class="desc">Tendido de cableado y diagnóstico de instalaciones, aplicando
+             precisión y seguridad en cada tarea.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Objetivo</h2>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:12px;">
+          Integrarme a un equipo de tecnología para iniciar y consolidar mi trayectoria,
+          desarrollando habilidades sólidas en programación, QA y sistemas mientras curso mis
+          estudios, evolucionando de un rol junior hacia un perfil de desarrollador confiable.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
